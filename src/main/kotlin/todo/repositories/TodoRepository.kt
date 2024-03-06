@@ -1,4 +1,9 @@
-package todo
+package todo.repositories
+
+import todo.models.read.TodoModel
+import todo.models.write.EditTodoModel
+import todo.models.write.NewTodoModel
+import todo.models.write.StatusEditModel
 
 interface TodoRepository {
 

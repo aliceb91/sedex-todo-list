@@ -1,11 +1,14 @@
-package todo
+package todo.repositories
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+import todo.models.read.TodoModel
+import todo.models.write.EditTodoModel
+import todo.models.write.NewTodoModel
+import todo.models.write.StatusEditModel
 import java.time.LocalDateTime
 import java.io.File
-import java.nio.file.Paths
 
 class JsonTodoRepository: TodoRepository {
 

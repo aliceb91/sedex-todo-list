@@ -1,4 +1,11 @@
-package todo
+package todo.domains
+
+import todo.repositories.TodoRepository
+import todo.models.read.TodoListModel
+import todo.models.read.TodoModel
+import todo.models.write.EditTodoModel
+import todo.models.write.NewTodoModel
+import todo.models.write.StatusEditModel
 
 class Domain(val todoRepository: TodoRepository) {
 

@@ -1,4 +1,4 @@
-package todo
+package todo.models.read
 
 data class TodoModel(
     val id: String = "",

@@ -1,4 +1,4 @@
-package todo
+package todo.models.write
 
 data class EditTodoModel (
     var id: String,
