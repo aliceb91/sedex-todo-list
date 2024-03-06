@@ -2,9 +2,6 @@ package todo
 
 import org.http4k.core.*
 import org.http4k.core.HttpHandler
-import org.http4k.server.SunHttp
-import org.http4k.filter.DebuggingFilters.PrintRequest
-import org.http4k.server.asServer
 import org.http4k.routing.routes
 import org.http4k.routing.bind
 import org.http4k.core.Method.POST
@@ -108,12 +105,3 @@ val app: HttpHandler = routes(
             .header("Content-Type", "application/json")
     }
 )
-
-fun main() {
-
-    val printingApp: HttpHandler = PrintRequest().then(app)
-
-    val server = printingApp.asServer(SunHttp(9000)).start()
-
-    println("Serverstarted on " + server.port())
-}
