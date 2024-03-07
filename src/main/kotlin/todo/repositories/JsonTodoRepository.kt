@@ -95,7 +95,7 @@ class JsonTodoRepository: TodoRepository {
             data.name,
             targetTodo.createdDate,
             LocalDateTime.now().toString(),
-            data.status
+            targetTodo.status
         )
         val newJsonList = jsonData.map {
             if (it.id == targetId) newTodo else it
